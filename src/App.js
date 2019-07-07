@@ -3,6 +3,7 @@ import Toolbar from "./Components/Toolbar";
 import SideDrawer from "./Components/SideDrawer";
 import "./index.css";
 import Backdrop from "./Components/Backdrop";
+import Timer from "./Components/Timer";
 class App extends Component {
   state = {
     sideDrawerOpen: false
@@ -28,8 +29,8 @@ class App extends Component {
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <main style={{ marginTop: "64px" }}>
-          <p>This is the page content!</p>
+        <main style={{ marginTop: "64px", height: "650px" }}>
+          <Timer />
         </main>
       </div>
     );
